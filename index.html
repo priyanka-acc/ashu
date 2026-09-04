@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>For Ashu ❤️</title>
+<style>
+*{box-sizing:border-box} html,body{margin:0;min-height:100%;font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
+body{background:radial-gradient(circle at top,#3b175f,#12051e 65%);color:#fff;overflow-x:hidden}
+.screen{min-height:100vh;display:none;align-items:center;justify-content:center;text-align:center;padding:28px 18px;position:relative;overflow:hidden}
+.screen.active{display:flex;animation:fade .8s ease}
+.card{width:min(680px,94vw);padding:34px 24px;border-radius:28px;background:rgba(255,255,255,.09);backdrop-filter:blur(12px);border:1px solid rgba(255,255,255,.15);box-shadow:0 20px 80px rgba(0,0,0,.3)}
+h1{font-size:clamp(2.2rem,9vw,5rem);margin:.2em 0;line-height:1.05}
+h2{font-size:clamp(1.7rem,6vw,3rem)}
+p{font-size:clamp(1.05rem,3.7vw,1.35rem);line-height:1.6}
+.small{opacity:.8;font-size:.95rem}
+button{border:0;border-radius:999px;padding:15px 25px;font-size:1rem;font-weight:800;cursor:pointer;background:#fff;color:#2a103d;box-shadow:0 10px 30px rgba(0,0,0,.25);margin-top:18px}
+button:active{transform:scale(.97)}
+.heart{font-size:4rem;animation:pulse 1.5s infinite}
+.confetti,.balloon{position:absolute;pointer-events:none}
+.balloon{font-size:2.4rem;animation:float 5s ease-in-out infinite}
+.b1{left:7%;top:15%}.b2{right:8%;top:20%;animation-delay:1s}.b3{left:15%;bottom:12%;animation-delay:2s}.b4{right:15%;bottom:15%;animation-delay:3s}
+.reason{display:none;margin:18px 0;padding:22px;border-radius:22px;background:rgba(255,255,255,.1);animation:slide .6s ease}
+.reason.show{display:block}.reason b{display:block;font-size:1.35rem;margin-bottom:8px}
+.next{display:none}.next.show{display:inline-block}
+#photo{max-width:100%;max-height:60vh;object-fit:contain;border-radius:22px;box-shadow:0 20px 70px rgba(0,0,0,.5);animation:photoIn 1.3s cubic-bezier(.2,.9,.2,1)}
+#photoSection .card{background:rgba(0,0,0,.18)}
+.flash{font-size:clamp(2rem,9vw,5rem);font-weight:900;animation:flash .8s ease}
+#music{position:fixed;right:14px;top:14px;z-index:20;width:42px;height:42px;padding:0;font-size:1.1rem;background:rgba(255,255,255,.9);display:none}
+@keyframes fade{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:none}}
+@keyframes slide{from{opacity:0;transform:translateX(25px)}to{opacity:1;transform:none}}
+@keyframes pulse{50%{transform:scale(1.12)}}
+@keyframes float{50%{transform:translateY(-30px) rotate(5deg)}}
+@keyframes photoIn{0%{opacity:0;transform:scale(.25) rotate(-8deg)}60%{transform:scale(1.05) rotate(2deg)}100%{opacity:1;transform:scale(1) rotate(0)}}
+@keyframes flash{0%,100%{transform:scale(1)}50%{transform:scale(1.15)}}
+</style>
+</head>
+<body>
+
+<button id="music" onclick="toggleMusic()">🎵</button>
+
+<section id="s1" class="screen active">
+  <div class="balloon b1">🎈</div><div class="balloon b2">🎈</div>
+  <div class="card">
+    <div class="heart">💌</div>
+    <p class="small">A tiny surprise for one very special human...</p>
+    <h2>Hey Ashu 👀</h2>
+    <p>I made something for you.<br><b>And no, you can't skip this. 😏</b></p>
+    <button onclick="start()">DON'T CLICK THIS 😏</button>
+  </div>
+</section>
+
+<section id="s2" class="screen">
+  <div class="balloon b1">🎈</div><div class="balloon b2">🎈</div><div class="balloon b3">🎈</div><div class="balloon b4">🎈</div>
+  <div class="card">
+    <div style="font-size:4rem">🎉🎂🎉</div>
+    <h1>HAPPY<br>BIRTHDAY ASHU!</h1>
+    <p>Another year older...<br>but don't worry, I won't tell anyone your age. 😂❤️</p>
+    <button onclick="show('s3')">Okay, continue 👀</button>
+  </div>
+</section>
+
+<section id="s3" class="screen">
+  <div class="card">
+    <h2>❤️ Why I Appreciate You</h2>
+    <div id="r1" class="reason show"><b>The Listener 🫶</b>You always listen to my stupid problems… even when I've probably told you the same thing 3 times. 😂</div>
+    <div id="r2" class="reason"><b>No Long-Term Fighting Contract 😂</b>We can fight, get annoyed with each other… and after some time, we're back to talking normally.</div>
+    <div id="r3" class="reason"><b>You Just Know 🥹</b>You somehow know when I'm sad, even when I don't tell you.</div>
+    <div id="r4" class="reason"><b>That Soft Heart ❤️</b>You have such a soft heart. You genuinely care, and that's something I really admire about you.</div>
+    <div id="r5" class="reason"><b>No Double-Sided Version 😄</b>Jo mun mein hai, wahi saamne hai.<br>No double face. No fake version. And honestly, that's rare. ❤️</div>
+    <button id="reasonBtn" onclick="nextReason()">Tell me more ❤️</button>
+    <button id="reasonNext" class="next" onclick="show('s4')">I have one last thing... 🥹</button>
+  </div>
+</section>
+
+<section id="s4" class="screen">
+  <div class="card">
+    <div style="font-size:3.5rem">🥹❤️</div>
+    <p>Ashu, you're not just someone I can laugh with.</p>
+    <p><b>You're someone I can be completely myself with.</b></p>
+    <p>Through stupid conversations, random fights, laughter and everything in between...</p>
+    <h2>I'm genuinely lucky to have you as my best friend. ❤️</h2>
+    <p>Happy Birthday, Ashu. 🎂</p>
+    <button onclick="surprise()">Wait... there's one more thing 😈</button>
+  </div>
+</section>
+
+<section id="s5" class="screen">
+  <div class="card">
+    <div class="flash">WAIT... 😳</div>
+    <p>Something is definitely missing...</p>
+    <p><b>3...</b></p><p><b>2...</b></p><p><b>1...</b></p>
+  </div>
+</section>
+
+<section id="photoSection" class="screen">
+  <div class="card">
+    <div style="font-size:3rem">💥🎉💥</div>
+    <h1> SURPRISE! ❤️</h1>
+    <img id="photo" src="surprise-photo.jpg" alt="Our special memory">
+    <h2>Happy Birthday, Ashu! 🥹❤️</h2>
+    <p>You better keep this friendship forever. No refunds. 😂</p>
+  </div>
+</section>
+
+<audio id="audio" src="birthday-music.wav" loop></audio>
+
+<script>
+let reason=1;
+function show(id){
+ document.querySelectorAll('.screen').forEach(x=>x.classList.remove('active'));
+ document.getElementById(id).classList.add('active');
+}
+function start(){
+ const a=document.getElementById('audio');
+ a.play().catch(()=>{});
+ document.getElementById('music').style.display='block';
+ show('s2');
+}
+function toggleMusic(){
+ const a=document.getElementById('audio');
+ if(a.paused){a.play();document.getElementById('music').textContent='🎵'}
+ else{a.pause();document.getElementById('music').textContent='🔇'}
+}
+function nextReason(){
+ if(reason<5){
+   reason++;
+   document.querySelectorAll('.reason').forEach(x=>x.classList.remove('show'));
+   document.getElementById('r'+reason).classList.add('show');
+   if(reason===5){
+     document.getElementById('reasonBtn').style.display='none';
+     document.getElementById('reasonNext').classList.add('show');
+   }
+ }
+}
+function surprise(){
+ show('s5');
+ setTimeout(()=>show('photoSection'),2600);
+ for(let i=0;i<80;i++){
+   const c=document.createElement('div'); c.className='confetti';
+   c.textContent=['🎉','❤️','✨','🎈'][Math.floor(Math.random()*4)];
+   c.style.left=Math.random()*100+'vw';
+   c.style.top=(-10-Math.random()*30)+'vh';
+   c.style.fontSize=(12+Math.random()*22)+'px';
+   c.style.transition='transform 3s linear, opacity 3s';
+   document.body.appendChild(c);
+   setTimeout(()=>{c.style.transform='translateY(120vh) rotate(720deg)';c.style.opacity='0'},30);
+   setTimeout(()=>c.remove(),3300);
+ }
+}
+</script>
+</body>
+</html>
